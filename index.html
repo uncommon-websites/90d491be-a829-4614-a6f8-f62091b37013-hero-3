@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company - AI-Powered University Guidance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animation keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+                filter: blur(4px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Base animation class - ease-out for entering elements */
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        }
+
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        }
+
+        /* Staggered delays for sequential reveals */
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-600 { animation-delay: 600ms; }
+        .delay-700 { animation-delay: 700ms; }
+
+        /* Typography Utilities */
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up,
+            .animate-fade-in,
+            .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+                filter: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white font-sans antialiased text-gray-900 selection:bg-blue-100">
+
+    <!-- Navigation Pill -->
+    <nav class="fixed top-8 left-0 right-0 z-50 flex justify-center pointer-events-none">
+        <div class="pointer-events-auto bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] rounded-full px-5 py-3 flex items-center justify-between w-[320px] animate-fade-in delay-0">
+            <!-- Logo Icon -->
+            <a href="#" class="flex items-center justify-center text-black hover:opacity-70 transition-opacity">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C13.1 2 14 2.9 14 4V8H18C19.1 8 20 8.9 20 10V14C20 15.1 19.1 16 18 16H14V20C14 21.1 13.1 22 12 22C10.9 22 10 21.1 10 20V16H6C4.9 16 4 15.1 4 14V10C4 8.9 4.9 8 6 8H10V4C10 2.9 10.9 2 12 2Z" fill="currentColor" fill-opacity="0.2"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 8.5C7.67157 8.5 7 9.17157 7 10V14C7 14.8284 7.67157 15.5 8.5 15.5H12.5C13.3284 15.5 14 14.8284 14 14V10C14 9.17157 13.3284 8.5 12.5 8.5H8.5ZM10.5 13.5C11.3284 13.5 12 12.8284 12 12C12 11.1716 11.3284 10.5 10.5 10.5C9.67157 10.5 9 11.1716 9 12C9 12.8284 9.67157 13.5 10.5 13.5Z" fill="black"/>
+                </svg>
+            </a>
+            
+            <!-- Brand Name -->
+            <span class="font-bold tracking-[0.2em] text-sm text-black">COMPANY</span>
+            
+            <!-- Menu Icon -->
+            <button class="flex flex-col gap-[5px] items-end justify-center w-6 h-6 hover:opacity-70 transition-opacity">
+                <span class="w-5 h-[1.5px] bg-black block"></span>
+                <span class="w-5 h-[1.5px] bg-black block"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-40 pb-12 px-4 sm:px-6 lg:px-8 w-full max-w-[1600px] mx-auto flex flex-col items-center">
+        
+        <!-- Eyebrow Text -->
+        <div class="text-center mb-8 animate-fade-in-up delay-100 flex flex-col gap-1">
+            <p class="text-gray-600 text-sm font-medium leading-tight tracking-wide">The AI bridge to US education</p>
+            <p class="text-gray-400 text-xs tracking-wide">Personalized counseling for every student</p>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-[7rem] font-medium tracking-tight text-center mb-16 text-balance text-gray-900 leading-[0.95] animate-fade-in-up delay-200 max-w-5xl mx-auto">
+            Your bridge to a global education
+        </h1>
+
+        <!-- Hero Image Container -->
+        <div class="relative w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-gray-100 animate-scale-in delay-300 group aspect-[4/3] md:aspect-[16/9] lg:aspect-[2.35/1]">
+            <!-- Image -->
+            <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/90d491be-a829-4614-a6f8-f62091b37013/hero-3-img-0-1771136509620.png" alt="Company Student Support Platform" class="w-full h-full object-cover object-center">
+            
+            <!-- Floating CTA Button -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-max max-w-[90%] animate-fade-in-up delay-500 z-10">
+                <a href="#" class="bg-[#2563eb] hover:bg-[#1d4ed8] transition-all duration-300 text-white px-6 py-3.5 rounded-full flex items-center gap-6 md:gap-12 shadow-lg hover:shadow-xl hover:-translate-y-0.5 font-medium text-sm sm:text-base group-hover:scale-[1.02]">
+                    <span class="font-semibold tracking-tight">Start Your Application</span>
+                    <span class="font-normal text-blue-100 flex items-center gap-2 text-sm">
+                        Get instant insights 
+                        <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
