@@ -1,0 +1,2 @@
+# 90d491be-a829-4614-a6f8-f62091b37013-hero-3
+Hero section variant 3 for 90d491be-a829-4614-a6f8-f62091b37013
